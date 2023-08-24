@@ -64,6 +64,9 @@
                                                 <rect key="frame" x="46" y="42.333333333333314" width="269.33333333333331" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Don't have account yet? Sign up"/>
+                                                <connections>
+                                                    <segue destination="3ep-rV-kQK" kind="show" id="T3J-6y-WP3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -89,6 +92,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.2900763358779" y="-2.1126760563380285"/>
+        </scene>
+        <!--SignUpStoryboard-->
+        <scene sceneID="uvB-ED-lHp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUpStoryboard" id="3ep-rV-kQK" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ST6-4k-eih"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxg-B0-c6P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="-133"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0Ty-ea-gdX">

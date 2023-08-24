@@ -17,6 +17,8 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        hideKeyboardWhenTappedAround()
+        
         setupUI()
         // Do any additional setup after loading the view.
     }
