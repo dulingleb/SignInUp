@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9607CCD62A9D3484008679B5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CCD52A9D3484008679B5 /* UserModel.swift */; };
+		9607CCD82A9D3BF4008679B5 /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CCD72A9D3BF4008679B5 /* VerifyCodeViewController.swift */; };
 		964608F52A992C5500BD0EBE /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964608F42A992C5500BD0EBE /* VerificationService.swift */; };
 		964608F72A9CBC5400BD0EBE /* BoolExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964608F62A9CBC5400BD0EBE /* BoolExtention.swift */; };
 		9662A8752A978007006625B5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662A8742A978007006625B5 /* SignUpViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9607CCD52A9D3484008679B5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		9607CCD72A9D3BF4008679B5 /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
 		964608F42A992C5500BD0EBE /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		964608F62A9CBC5400BD0EBE /* BoolExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtention.swift; sourceTree = "<group>"; };
 		9662A8742A978007006625B5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9607CCD42A9D3474008679B5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9607CCD52A9D3484008679B5 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		964608F32A992C3600BD0EBE /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +97,7 @@
 		96C2DB2E2A952EDA00092A86 /* SignInUp */ = {
 			isa = PBXGroup;
 			children = (
+				9607CCD42A9D3474008679B5 /* Models */,
 				964608F32A992C3600BD0EBE /* Services */,
 				9662A8782A97A76B006625B5 /* Extentions */,
 				96C2DB452A9535AA00092A86 /* Controllers */,
@@ -121,6 +134,7 @@
 			children = (
 				96C2DB462A976D1A00092A86 /* SignInViewController.swift */,
 				9662A8742A978007006625B5 /* SignUpViewController.swift */,
+				9607CCD72A9D3BF4008679B5 /* VerifyCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +214,8 @@
 			files = (
 				96C2DB302A952EDA00092A86 /* AppDelegate.swift in Sources */,
 				9662A87C2A97A7CC006625B5 /* UIViewExtention.swift in Sources */,
+				9607CCD62A9D3484008679B5 /* UserModel.swift in Sources */,
+				9607CCD82A9D3BF4008679B5 /* VerifyCodeViewController.swift in Sources */,
 				964608F72A9CBC5400BD0EBE /* BoolExtention.swift in Sources */,
 				964608F52A992C5500BD0EBE /* VerificationService.swift in Sources */,
 				96C2DB322A952EDA00092A86 /* SceneDelegate.swift in Sources */,

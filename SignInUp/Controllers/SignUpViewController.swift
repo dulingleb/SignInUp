@@ -60,7 +60,6 @@ class SignUpViewController: UIViewController {
         let email = sender.text ?? "";
         isValidEmail = VerificationService.isValidEmail(email: email)
         wrongEmailLabel.isHidden = isValidEmail
-        print(isValidEmail)
     }
     
     @IBAction func passwordTextFieldAction(_ sender: UITextField) {
@@ -71,6 +70,20 @@ class SignUpViewController: UIViewController {
     
     @IBAction func repeatPasswordTextFieldAction(_ sender: UITextField) {
         checkRepeatedPassword()
+    }
+    
+    @IBAction func backButtonAction(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
+    @IBAction func continueButtonAction(_ sender: Any) {
+        if let email = emailTextField.text,
+           let password = passwordTextField.text {
+            let user = UserModel(name: nameTextField.text, email: email, password: password)
+            
+            performSegue(withIdentifier: "goToVerifyCodeScreen", sender: user)
+        }
     }
     
     private func setStrengthView(password: String) {
@@ -120,14 +133,14 @@ class SignUpViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard segue.identifier == "goToVerifyCodeScreen" else { return }
+        guard let destination = segue.destination as? VerifyCodeViewController,
+            let userModel = sender as? UserModel else { return }
+        
+        destination.userModel = userModel
     }
-    */
+
 
 }

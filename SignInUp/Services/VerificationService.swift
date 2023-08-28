@@ -7,17 +7,9 @@
 
 import Foundation
 
-enum strenghtPassword {
-    case veryWeak
-    case weak
-    case notVeryWeak
-    case notVeryStron
-    case strong
-}
-
 class VerificationService {
     
-    // must be sorted by stregngth
+    // key is value of strength
     static let strenghtPasswordRegexes: [Int: String] = [
         1: "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
         2: "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$",
