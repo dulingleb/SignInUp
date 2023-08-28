@@ -24,8 +24,17 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var continueButton: UIButton!
     
-    private var isValidEmail = false
+    private var isValidEmail: Bool = false {
+        didSet {continueButtonState()}
+    }
+    private var isValidPassword: Bool = false {
+        didSet {continueButtonState()}
+    }
+    private var isValidRepeatePassword: Bool = false {
+        didSet {continueButtonState()}
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +56,6 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
     @IBAction func emailTextFieldAction(_ sender: UITextField) {
         let email = sender.text ?? "";
         isValidEmail = VerificationService.isValidEmail(email: email)
@@ -67,7 +75,10 @@ class SignUpViewController: UIViewController {
     
     private func setStrengthView(password: String) {
         let strenghtPassword = VerificationService.strenghtPassword(password: password)
-        print(strenghtPassword)
+        
+        isValidPassword = Bool(strenghtPassword)
+        wrongPasswordLabel.isHidden = isValidPassword
+
         for (index, view) in strongPasswordIndicator.enumerated() {
             view.alpha = 0.2
             if index < strenghtPassword {
@@ -81,6 +92,11 @@ class SignUpViewController: UIViewController {
         let password = passwordTextField.text ?? ""
         let passwordsConfirm = VerificationService.isRepeatedPassword(password1: password, password2: repeatedPassword)
         wrongRepeatPasswordLabel.isHidden = passwordsConfirm
+        isValidRepeatePassword = passwordsConfirm
+    }
+    
+    private func continueButtonState() {
+        continueButton.isEnabled = isValidEmail && isValidPassword && isValidRepeatePassword
     }
     
     private func startKeyboardObserver() {

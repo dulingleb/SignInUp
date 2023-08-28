@@ -151,7 +151,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="QfA-X5-eFA">
                                                 <rect key="frame" x="8" y="591.33333333333337" width="377" height="68.666666666666629"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-Ps-U0K">
+                                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ts-Ps-U0K">
                                                         <rect key="frame" x="146.66666666666666" y="0.0" width="84" height="34.333333333333336"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
@@ -188,6 +188,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="0Ts-Ps-U0K" id="G2e-k7-2th"/>
                         <outlet property="emailTextField" destination="kDf-nQ-qcQ" id="RMg-5Z-MjC"/>
                         <outlet property="nameTextField" destination="omb-Tb-Kr0" id="9cr-vz-OTn"/>
                         <outlet property="passwordTextField" destination="c8A-FP-UDx" id="xX2-Zw-dlH"/>
