@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		964608F52A992C5500BD0EBE /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964608F42A992C5500BD0EBE /* VerificationService.swift */; };
 		9662A8752A978007006625B5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662A8742A978007006625B5 /* SignUpViewController.swift */; };
 		9662A8772A97A1DE006625B5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9662A8762A97A1DE006625B5 /* MainStoryboard.storyboard */; };
 		9662A87C2A97A7CC006625B5 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662A87B2A97A7CC006625B5 /* UIViewExtention.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		964608F42A992C5500BD0EBE /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		9662A8742A978007006625B5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9662A8762A97A1DE006625B5 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9662A87B2A97A7CC006625B5 /* UIViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		964608F32A992C3600BD0EBE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				964608F42A992C5500BD0EBE /* VerificationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9662A8782A97A76B006625B5 /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +82,7 @@
 		96C2DB2E2A952EDA00092A86 /* SignInUp */ = {
 			isa = PBXGroup;
 			children = (
+				964608F32A992C3600BD0EBE /* Services */,
 				9662A8782A97A76B006625B5 /* Extentions */,
 				96C2DB452A9535AA00092A86 /* Controllers */,
 				96C2DB442A95354F00092A86 /* Views */,
@@ -186,6 +197,7 @@
 			files = (
 				96C2DB302A952EDA00092A86 /* AppDelegate.swift in Sources */,
 				9662A87C2A97A7CC006625B5 /* UIViewExtention.swift in Sources */,
+				964608F52A992C5500BD0EBE /* VerificationService.swift in Sources */,
 				96C2DB322A952EDA00092A86 /* SceneDelegate.swift in Sources */,
 				9662A8752A978007006625B5 /* SignUpViewController.swift in Sources */,
 				96C2DB472A976D1A00092A86 /* SignInViewController.swift in Sources */,

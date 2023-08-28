@@ -8,7 +8,7 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var wrongEmailLabel: UILabel!
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -25,12 +25,14 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     
-        override func viewDidLoad() {
+    private var isValidEmail = false
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         startKeyboardObserver()
         hideKeyboardWhenTappedAround()
-
+        
         setupUI()
     }
     
@@ -43,6 +45,42 @@ class SignUpViewController: UIViewController {
             view.alpha = 0.2
         }
         
+    }
+    
+    
+    @IBAction func emailTextFieldAction(_ sender: UITextField) {
+        let email = sender.text ?? "";
+        isValidEmail = VerificationService.isValidEmail(email: email)
+        wrongEmailLabel.isHidden = isValidEmail
+        print(isValidEmail)
+    }
+    
+    @IBAction func passwordTextFieldAction(_ sender: UITextField) {
+        let password = passwordTextField.text ?? ""
+        setStrengthView(password: password)
+        checkRepeatedPassword()
+    }
+    
+    @IBAction func repeatPasswordTextFieldAction(_ sender: UITextField) {
+        checkRepeatedPassword()
+    }
+    
+    private func setStrengthView(password: String) {
+        let strenghtPassword = VerificationService.strenghtPassword(password: password)
+        print(strenghtPassword)
+        for (index, view) in strongPasswordIndicator.enumerated() {
+            view.alpha = 0.2
+            if index < strenghtPassword {
+                view.alpha = 1
+            }
+        }
+    }
+    
+    private func checkRepeatedPassword() {
+        let repeatedPassword = repeatPasswordTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        let passwordsConfirm = VerificationService.isRepeatedPassword(password1: password, password2: repeatedPassword)
+        wrongRepeatPasswordLabel.isHidden = passwordsConfirm
     }
     
     private func startKeyboardObserver() {
