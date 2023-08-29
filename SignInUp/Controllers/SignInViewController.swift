@@ -14,6 +14,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
+    var user: UserModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,8 +25,25 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func signInButtonAction(_ sender: Any) {
+        if let decodedUserData = UserDefaults.standard.object(forKey: "user") as? Data {
+            user = try! JSONDecoder().decode(UserModel.self, from: decodedUserData)
+        }
+        
+        if user?.email != emailTextField.text ||
+            user?.password != passwordTextField.text {
+                errorLabel.isHidden = true
+                return
+        }
+        
+        let mainStoryBoard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        let mainViewController = mainStoryBoard.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
+        
+        self.show(mainViewController, sender: user)
+    }
+    
+    
     private func setupUI() {
-        signInButton.isEnabled = false
         errorLabel.isHidden = true
     }
 

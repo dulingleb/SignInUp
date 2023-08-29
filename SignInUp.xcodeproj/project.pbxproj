@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9607CCD62A9D3484008679B5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CCD52A9D3484008679B5 /* UserModel.swift */; };
 		9607CCD82A9D3BF4008679B5 /* VerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CCD72A9D3BF4008679B5 /* VerifyCodeViewController.swift */; };
+		9607CCDA2A9E18FB008679B5 /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CCD92A9E18FB008679B5 /* WelcomViewController.swift */; };
+		9607CCDC2A9E273E008679B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607CCDB2A9E273E008679B5 /* MainViewController.swift */; };
 		964608F52A992C5500BD0EBE /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964608F42A992C5500BD0EBE /* VerificationService.swift */; };
 		964608F72A9CBC5400BD0EBE /* BoolExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964608F62A9CBC5400BD0EBE /* BoolExtention.swift */; };
 		9662A8752A978007006625B5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9662A8742A978007006625B5 /* SignUpViewController.swift */; };
@@ -26,6 +28,8 @@
 /* Begin PBXFileReference section */
 		9607CCD52A9D3484008679B5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9607CCD72A9D3BF4008679B5 /* VerifyCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeViewController.swift; sourceTree = "<group>"; };
+		9607CCD92A9E18FB008679B5 /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
+		9607CCDB2A9E273E008679B5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		964608F42A992C5500BD0EBE /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		964608F62A9CBC5400BD0EBE /* BoolExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolExtention.swift; sourceTree = "<group>"; };
 		9662A8742A978007006625B5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				96C2DB462A976D1A00092A86 /* SignInViewController.swift */,
 				9662A8742A978007006625B5 /* SignUpViewController.swift */,
 				9607CCD72A9D3BF4008679B5 /* VerifyCodeViewController.swift */,
+				9607CCD92A9E18FB008679B5 /* WelcomViewController.swift */,
+				9607CCDB2A9E273E008679B5 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96C2DB302A952EDA00092A86 /* AppDelegate.swift in Sources */,
+				9607CCDC2A9E273E008679B5 /* MainViewController.swift in Sources */,
 				9662A87C2A97A7CC006625B5 /* UIViewExtention.swift in Sources */,
 				9607CCD62A9D3484008679B5 /* UserModel.swift in Sources */,
 				9607CCD82A9D3BF4008679B5 /* VerifyCodeViewController.swift in Sources */,
@@ -221,6 +228,7 @@
 				96C2DB322A952EDA00092A86 /* SceneDelegate.swift in Sources */,
 				9662A8752A978007006625B5 /* SignUpViewController.swift in Sources */,
 				96C2DB472A976D1A00092A86 /* SignInViewController.swift in Sources */,
+				9607CCDA2A9E18FB008679B5 /* WelcomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
